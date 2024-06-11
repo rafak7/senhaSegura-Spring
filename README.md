@@ -24,29 +24,44 @@ Acesse a aplicação em `http://localhost:8080`.
 
 Você pode verificar a segurança de uma senha fazendo uma requisição POST para o endpoint `/validate-password` com um corpo JSON contendo a senha que deseja verificar. Veja um exemplo utilizando o Postman:
 
-### Request
+#### Request
 - **Method**: POST
 - **URL**: `http://localhost:8080/validate-password`
 - **Body**:
     ```json
     {
-        "password": "SuaSenhaAqui123!"
+        "password": "123"
     }
     ```
 
-### Response
+#### Response
 - **Status**: 200 OK
 - **Body**:
     ```json
     {
         "failures": [
             "A senha deve possuir pelo menos 8 caracteres",
-            "A senha deve conter pelo menos uma letra maiuscula",
-            "A senha deve conter pelo menos uma letra minuscula",
-            "A senha deve conter pelo menos um dígito numérico",
+            "A senha deve conter pelo menos uma letra maiúscula",
+            "A senha deve conter pelo menos uma letra minúscula",
             "A senha deve conter pelo menos um dígito especial (e.g., !@#$%)"
         ]
     }
+    ```
+### Cenário 2: Senha cumpre todos os requisitos
+
+#### Request
+- **Method**: POST
+- **URL**: `http://localhost:8080/validate-password`
+- **Body**:
+    ```json
+    {
+        "password": "123A5a#!"
+    }
+    ```
+
+#### Response
+- **Status**: 204 No Content
+
 
 
 ---
