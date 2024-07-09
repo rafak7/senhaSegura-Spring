@@ -7,7 +7,7 @@
 ## 🔍 Baixe o projeto e teste você mesmo na prática
 1. Clone o repositório:
     ```sh
-    git clone https://github.com/seu-usuario/senhaSegura-Spring.git
+    git clone https://github.com/rafak7/senhaSegura-Spring.git
     ```
 2. Navegue até o diretório do projeto:
     ```sh
